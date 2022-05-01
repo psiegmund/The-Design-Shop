@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* ============================= 
+            ASSETS
+================================*/
+/* 
+font-family: 'Karla', sans-serif;
+Farbe: #323A45 / #848484
+*/
+
+/* ============================= 
+            GENERAL STYLING
+================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #323a45;
+}
+
+h2 {
+    color: #323a45;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #848484;
+    font-size: 1.4rem;
+}
+
+/* ============================= 
+            HEADER STYLING
+================================*/
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5vh 5%;
+}
+
+#navigation h1 {
+    font-size: 2rem;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+#navigation ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+#navigation ul li {
+    padding: 0 0 0 60px;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+#navigation h1:hover,
+#navigation ul li:hover {
+    opacity: 0.3;
+    transition: 0.5s all;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.burgerMenu span {
+    display: block;
+    height: 5px;
+    width: 30px;
+    margin: 3px;
+    background-color: #323a45;
+}
+
+#mobileNav {
+    visibility: hidden;
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    margin: 0 5%;
+    background-color: #000000aa;
+}
+
+#mobileNav p {
+    color: #fff;
+    font-size: 2rem;
+    padding: 20px 0;
+    transition: 0.5s all;
+}
+
+#mobileNav p:hover {
+    color: #848484;
+    transition: 0.5s all;
+}
+
+/* ============================= 
+            MAIN STYLING
+================================*/
+
+/* ----------- Grid Styling--------- */
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* align-items: center; */
+    gap: 3rem;
+    margin: 0 0 4vh 0;
+}
+
+.contentGridSmall {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.productBig {
+    grid-column: 1 / 4;
+}
+
+.productImg {
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.productImg:hover {
+    opacity: 0.3;
+    transition: 0.5s all;
+}
+
+.caption div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+/* ============================= 
+            FOOTER STYLING
+================================*/
+
+#footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 3rem;
+}
+
+#footer article:first-of-type {
+    grid-column: 1 / 3;
+}
+
+#footer article span {
+    font-weight: 600;
+}
+
+#footer article:nth-of-type(2) {
+    font-weight: 600;
+}
+
+#footer article:nth-of-type(3) p:nth-of-type(2) {
+    font-style: italic;
+}
+
+#footer article:last-of-type {
+    grid-column: 5 / 7;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.footerContent h2 {
+    margin: 0 0 5vh 0;
+}
+
+.footerContent p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #000;
+}
+
+footer>p {
+    margin: 5vh 0 2vh 0;
+}
+
+/* ============================= 
+            MEDIA QUERIES
+================================*/
+
+@media only screen and (max-width: 576px) {
+
+
+    #navigation ul {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+
+    .contentGrid {
+        display: block;
+        gap: 3rem;
+        margin: 0 0 4vh 0;
+    }
+
+    .caption p {
+        margin: 0 0 4vh 0;
+    }
+
+    .contentGridSmall {
+        display: block;
+        gap: 3rem;
+        margin: 0 0 4vh 0;
+    }
+
+    #footer {
+        display: block;
+        gap: 3rem;
+        margin: 15vh 0 0 0;
+    }
+
+    #footer article h2 {
+        margin: 6vh 0;
+    }
+}
